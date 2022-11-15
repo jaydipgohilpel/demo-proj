@@ -15,7 +15,7 @@ import { DashboardComponent } from './observable-practice-module/dashboard/dashb
 import { CompliteDashboardComponent } from './observable-practice-module/complite-subject-demo/complite-dashboard/complite-dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent ,canActivate: [AuthGuard],},
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   {
     path: 'dashboard-all',
@@ -47,7 +47,11 @@ const routes: Routes = [
     component: CompliteDashboardComponent,
     canActivate: [AuthGuard],
   },
-  { path: 'auth-guards-practices', component: OneComponent, canActivate: [AuthGuard] },
+  {
+    path: 'auth-guards-practices',
+    component: OneComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'twocomponent', component: TwoComponent, canActivate: [AuthGuard] },
   {
     path: 'threecomponent',

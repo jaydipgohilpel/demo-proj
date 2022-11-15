@@ -1,2 +1,2 @@
-json-server --watch db.json
 cd src/assets/data
+json-server --watch db.json
