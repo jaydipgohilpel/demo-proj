@@ -1,0 +1,46 @@
+<h2 class="observable-practice-modules-h2">left-sidebar-componunt !</h2>
+<div class="row justify-content-sm-center">
+  <h3>count from normal observable : {{count}}</h3>
+</div>
+
+<div class="row justify-content-sm-center">
+  <h3>using subject</h3>
+  <div style="text-align:center ;">
+    <button type="button" class="btn btn-success" (click)="subjectShow()">Subject Show</button>
+    <button type="button" class="btn btn-danger" (click)="subjectHide()">Subject Hide</button>
+  </div>
+</div>
+<br />
+<div class="row justify-content-sm-center">
+  <div style="text-align:center ;">
+    <div>
+      <h3>
+        for second componunt
+        using subject
+      </h3>
+    </div>
+    <button type="button" class="btn btn-success" (click)="incrementCounter()">Increment Counter</button>
+    <br><br>
+    <button type="button" class="btn btn-danger" (click)="decrementCounter()">Decrement Counter</button>
+  </div>
+</div>
+<br />
+
+<br />
+<div class="row justify-content-sm-center">
+  <div style="text-align:center ;">
+    <div>
+      <h3>
+        share data across meni componunt
+      </h3>
+    </div>
+    <form>
+      <div class="form-row">
+        <label for="validationServer01">Enter Data To Share</label>
+        <input type="text" class="form-control is-valid" #input id="validationServer01" [value]="accessDataFromServices"
+          placeholder="Enter Data To Share" required (keyup)="shareData(input.value)">
+      </div>
+    </form>
+  </div>
+</div>
+<br />

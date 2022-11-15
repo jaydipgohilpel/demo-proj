@@ -1,0 +1,27 @@
+.sidebar {
+  width: 25%;
+  height: 100vh;
+  background-color: lightblue;
+}
+.main-body {
+  width: 75%;
+  height: 100vh;
+  background-color: lightcoral;
+}
+.main-page {
+  display: flex;
+}
+.subcomponunt {
+  width: 100%;
+  height: 33.33vh;
+  border: 1px solid black;
+}
+.first {
+  background-color: lightgray;
+}
+.second {
+  background-color: gray;
+}
+.third {
+  background-color: cornsilk;
+}

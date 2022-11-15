@@ -1,0 +1,21 @@
+<h2 class="observable-practice-modules-h2">complite-datatable works!</h2>
+<h2>datatable</h2>
+<p-table [value]="products" responsiveLayout="scroll" [scrollable]="true" scrollHeight="55vh">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>#Id</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Image</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-products>
+    <tr>
+      <td>{{products.id}}</td>
+      <td>{{products.title}}</td>
+      <td>{{products.price | currency:'INR'}}</td>
+      <td><img src="{{products.image}}" class="shadow-4"></td>
+    </tr>
+  </ng-template>
+</p-table>

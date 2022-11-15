@@ -1,0 +1,33 @@
+<h2 class="observable-practice-modules-h2">complite-form-compo works!</h2>
+<div style="display:flex;justify-content: center;">
+
+
+  <form #creatProductForm="ngForm" id="creatProductForm" name="creatProductForm"
+    (ngSubmit)="onSubmit(creatProductForm)">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="form-outline">
+          <label class="form-label" for="title">Title</label>
+          <input type="text" id="title" class="form-control form-control-lg" #txtTitle="ngModel" name="title" required
+            ngModel />
+        </div>
+        <div *ngIf="(txtTitle.touched  && txtTitle.invalid)" class="margin-top text-danger">
+          Title is required
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="form-outline">
+          <label class="form-label" for="price">Price</label>
+          <input type="number" id="price" class="form-control form-control-lg" name="price" required #txtPrice="ngModel"
+            ngModel />
+        </div>
+        <div class="margin-top text-danger">
+          <span *ngIf="(txtPrice.touched && txtPrice.invalid)">
+            Price is required
+          </span>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

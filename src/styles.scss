@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "~/primeicons/primeicons.css";
+// @import "~primeng/resources/themes/saga-blue/theme.css";
+// @import "~primeng/resources/primeng.min.css";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow: scroll;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.observable-practice-modules-h2 {
+  background-color: skyblue;
+  color: white;
+  text-shadow: 2px 1px blue;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: sans;
+  color: white;
+}

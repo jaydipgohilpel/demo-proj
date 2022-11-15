@@ -1,0 +1,132 @@
+<app-navbar></app-navbar>
+<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp" class="w-100"
+            style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;" alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0  px-md-2">Registration Form</h3>
+            <form [formGroup]="registrationForm" class="px-md-2" (submit)="submitRegistrationForm()">
+              <div class="row">
+                <div class="col-md-6 mb-4 ">
+                  <label class="form-label" for="firstName">Fisrt Name</label>
+                  <input type="text" id="firstName" class="form-control" formControlName="firstName"
+                    [ngClass]="{'is-invalid':firstName && firstName.invalid && (firstName.touched || isSubmitted),'is-valid':firstName && firstName.valid}" />
+                  <span class="validator" *ngIf="firstName && firstName.invalid && (firstName.touched || isSubmitted)
+                    ">
+                    <div *ngIf="firstName.errors?.['required']">Fisrt Name is Required</div>
+                    <div *ngIf="firstName.errors?.['pattern']">Fisrt Name is Invalid</div>
+                  </span>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <label class="form-label" for="lastName">Last Name</label>
+                  <input type="text" id="lastName" class="form-control" formControlName="lastName"
+                    [ngClass]="{'is-invalid':lastName && lastName.invalid && (lastName.touched || isSubmitted),'is-valid':lastName && lastName.valid}" />
+                  <span class="validator" *ngIf="lastName && lastName.invalid && (lastName.touched || isSubmitted)
+                    ">
+                    <div *ngIf="lastName.errors?.['required']">Last Name is Required</div>
+                    <div *ngIf="lastName.errors?.['pattern']">Last Name is Invalid</div>
+                  </span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <label class="form-label" for="email">Email</label>
+                  <input type="text" id="email" class="form-control" formControlName="email"
+                    [ngClass]="{'is-invalid':email && email.invalid && (email.touched || isSubmitted),'is-valid':email && email.valid}" />
+                  <span class="validator" *ngIf="email && email.invalid && (email.touched || isSubmitted)
+                    ">
+                    <div *ngIf="email.errors?.['required']">Email is
+                      Required</div>
+                    <div *ngIf="email.errors?.['email']">Email is
+                      Invalid</div>
+                  </span>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <label class="form-label" for="mobile">Mobile No.</label>
+                  <input type="text" id="mobile" class="form-control" formControlName="mobile"
+                    [ngClass]="{'is-invalid':mobile && mobile.invalid && ( mobile.touched || isSubmitted),'is-valid':mobile && mobile.valid}" />
+                  <span class="validator" *ngIf="mobile && mobile.invalid && (mobile.touched || isSubmitted)
+                  ">
+                    <div *ngIf="mobile.errors?.['required']">Mobile is Required</div>
+                    <div *ngIf="mobile.errors?.['pattern']">Mobile Number is Invalid</div>
+                    <div *ngIf="mobile.errors?.['minlength'] || mobile.errors?.['maxlength']">Mobile Number must be 10
+                      Digit</div>
+
+                  </span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <label class="form-label" for="password">Password</label>
+                  <input type="password" id="password" class="form-control" formControlName="password"
+                    (keydown)="marktouch(password)"
+                    [ngClass]="{'is-invalid':password && password.invalid && ( password.touched || isSubmitted ) || password && password.valid && !matchPassword && !ispasswordValid,'is-valid':password && password.valid && ispasswordValid}   " />
+                  <span class="validator" *ngIf="password && password.invalid && ( password.touched || isSubmitted)
+                    ">
+                    <div *ngIf="password.errors?.['required']">Password is Required</div>
+                    <div *ngIf="password.errors?.['pattern']"></div>
+                    <div *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">Password must be 6 to
+                      8
+                      Digit only</div>
+
+                  </span>
+                  <span class="validator">
+                    <div *ngIf="password  && password.touched  && isUppercase==false">min 1
+                      Uppercase required
+                    </div>
+                    <div *ngIf="password  && password.touched  && isLowercase==false">min 1
+                      Lowercase required
+                    </div>
+                    <div *ngIf="password  && password.touched  && isNumber==false">min 1
+                      Numbers required
+                    </div>
+                    <div *ngIf="password  && password.touched  && isSpecialCharacter==false">min 1
+                      special charcter
+                      required
+                    </div>
+                  </span>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <label class="form-label" for="confirmPassword">Confirm Password</label>
+                  <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword"
+                    (keydown)="marktouch(confirmPassword)"
+                    [ngClass]="{'is-invalid':confirmPassword && confirmPassword.invalid && ( confirmPassword.touched || isSubmitted ) || confirmPassword && confirmPassword.valid && !matchPassword ,'is-valid':confirmPassword && confirmPassword.valid && matchPassword}" />
+                  <span class="validator" *ngIf="confirmPassword && confirmPassword.invalid && ( confirmPassword.touched || isSubmitted)
+                    ">
+                    <div *ngIf="confirmPassword.errors?.['required']">confirmPassword is Required</div>
+                    <div *ngIf="confirmPassword.errors?.['minlength'] || confirmPassword.errors?.['maxlength']">Confirm
+                      Password must be 6 to
+                      8
+                      Digit only</div>
+
+
+                  </span>
+                  <div class="validator"
+                    *ngIf="(confirmPassword &&  confirmPassword.touched || isSubmitted) && !matchPassword">Password and
+                    Confirm Password Not Match</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <label for="dateOfBirth" class="form-label">Select a date of birth</label>
+                    <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth"
+                      [ngClass]="{'is-invalid':dateOfBirth && dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched || isSubmitted),'is-valid':dateOfBirth && dateOfBirth.valid}" />
+                    <span class="validator" *ngIf="dateOfBirth && dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched || isSubmitted)
+                    ">Date of Birth
+                      is
+                      Required</span>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

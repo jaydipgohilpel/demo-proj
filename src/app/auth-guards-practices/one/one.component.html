@@ -1,0 +1,16 @@
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<app-navbar></app-navbar>
+<h2>auth-guards-practices</h2>
+<nav>
+  <ul>
+    <li><a routerLink="/twocomponent" routerLinkActive="active" ariaCurrentWhenActive="page">two Component</a></li>
+    <li><a routerLink="/threecomponent" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+  </ul>
+</nav>
+<div>
+  <button type="button" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;"
+  (click)="onLogout()">Logout</button>
+</div>
+
+<!-- The routed views render in the <router-outlet>-->
+

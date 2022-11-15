@@ -1,0 +1,35 @@
+<p-dialog header="Update products" [(visible)]="updateModal" [modal]="true" [style]="{width: '50vw'}"
+  [baseZIndex]="10000" [draggable]="false" [resizable]="false" (onHide)="closeDialog(UpdateProductForm)">
+  <h3>#Id:{{productsId}}</h3>
+  <form #UpdateProductForm="ngForm" id="UpdateProductForm" name="UpdateProductForm"
+    (ngSubmit)="onSubmit(UpdateProductForm)">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="form-outline">
+          <label class="form-label" for="title">Title</label>
+          <input type="text" id="title" class="form-control form-control-lg" #txtTitle="ngModel" [(ngModel)]="title"
+            name="title" required ngModel />
+        </div>
+        <div *ngIf="(txtTitle.touched  && txtTitle.invalid )" class="margin-top text-danger">
+          Title is required
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="form-outline">
+          <label class="form-label" for="price">Price</label>
+          <input type="number" id="price" class="form-control form-control-lg" name="price" [(ngModel)]="price" required
+            #txtPrice="ngModel" ngModel />
+        </div>
+        <div class="margin-top text-danger">
+          <span *ngIf="(txtPrice.touched && txtPrice.invalid  )">
+            Price is required
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 pt-2">
+      <button pButton type="submit" [disabled]="UpdateProductForm.invalid" label="Update Product"
+        icon="pi pi-check"></button>
+    </div>
+  </form>
+</p-dialog>

@@ -1,0 +1,19 @@
+<h2 class="observable-practice-modules-h2">first-componunt !</h2>
+<div>
+  <h2 *ngIf="exclusive">
+    exclusive display block Using Subject
+  </h2>
+</div>
+
+<div class="row justify-content-sm-center">
+  <div>
+
+    <form>
+      <div class="form-row">
+        <label for="validationServer01">data from subject</label>
+        <input type="text" class="form-control is-valid" id="validationServer01" #input (keyup)="shareData(input.value)"
+          [value]="accessDataFromServices" placeholder="Enter Data To Share" required>
+      </div>
+    </form>
+  </div>
+</div>

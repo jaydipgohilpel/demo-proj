@@ -1,0 +1,67 @@
+img {
+  width: 81px;
+  height: 73px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+
+  table {
+    width: 90%;
+  }
+
+  td,
+  tr,
+  th {
+    border: 1px solid blue;
+    border-collapse: collapse;
+  }
+}
+
+.spinner-parent {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .progressbar {
+    z-index: 1;
+  }
+}
+
+.button-margin {
+  button {
+    margin: 5px 5px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.create-product-button {
+  margin-right: 5px;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  width: fit-content;
+}
+
+.manage-product {
+  display: contents;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0;
+  font: unset;
+}
