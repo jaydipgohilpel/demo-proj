@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './one.component.html',
 })
 export class OneComponent implements OnInit {
-  constructor(private authService: AuthService , private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
   onLogout() {

@@ -5,10 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './three.component.html',
 })
 export class ThreeComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -12,7 +12,6 @@ import { CompliteSubjectDemoModule } from './complite-subject-demo/complite-subj
 import { MenubarModule } from 'primeng/menubar';
 import { NavbarComponent } from '../navbar/navbar.component';
 
-
 @NgModule({
   declarations: [
     FirstComponuntComponent,
@@ -21,7 +20,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
     ThirdComponuntComponent,
     DashboardComponent,
   ],
-  imports: [CommonModule,NavbarModule],
+  imports: [CommonModule, NavbarModule],
   exports: [
     FirstComponuntComponent,
     LeftSidebarComponent,
@@ -32,7 +31,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
     InputSwitchModule,
     CompliteSubjectDemoModule,
     MenubarModule,
-    NavbarModule
+    NavbarModule,
   ],
 })
 export class ObservablePracticeModuleModule {}

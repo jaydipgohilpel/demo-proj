@@ -64,7 +64,7 @@ export class DashboardAllComponent implements OnInit {
     Toast.fire({
       icon: 'success',
       title: 'User has been Logout',
-    })
+    });
     this.authService.isLogin(null);
     this.router.navigate(['/login']);
   }

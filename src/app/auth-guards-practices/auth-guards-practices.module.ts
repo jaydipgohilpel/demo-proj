@@ -8,7 +8,7 @@ import { NavbarModule } from '../navbar/navbar.module';
 
 @NgModule({
   declarations: [OneComponent, TwoComponent, ThreeComponent],
-  imports: [CommonModule, RouterModule,NavbarModule ],
+  imports: [CommonModule, RouterModule, NavbarModule],
   exports: [OneComponent, TwoComponent, ThreeComponent],
 })
 export class AuthGuardsPracticesModule {}

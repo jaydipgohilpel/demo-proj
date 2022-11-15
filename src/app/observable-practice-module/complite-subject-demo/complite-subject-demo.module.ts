@@ -17,7 +17,7 @@ import { NavbarModule } from 'src/app/navbar/navbar.module';
     CompliteDashboardComponent,
     CompliteFooterComponent,
   ],
-  imports: [CommonModule, FormsModule, TableModule,NavbarModule],
+  imports: [CommonModule, FormsModule, TableModule, NavbarModule],
   exports: [
     CompliteLeftbarComponent,
     CompliteFormCompoComponent,

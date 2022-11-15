@@ -6,7 +6,7 @@ import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [NavbarComponent],
-  imports: [CommonModule, MenubarModule, ButtonModule,],
-  exports: [NavbarComponent]
+  imports: [CommonModule, MenubarModule, ButtonModule],
+  exports: [NavbarComponent],
 })
 export class NavbarModule {}

@@ -30,15 +30,16 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { PassDataInHeaderComponent } from './pass-data-in-header/pass-data-in-header.component';
 import { RatingModule } from 'primeng/rating';
 import { RegistrationInReactiveFormComponent } from './registration-in-reactive-form/registration-in-reactive-form.component';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {InputSwitchModule} from 'primeng/inputswitch';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { InputSwitchModule } from 'primeng/inputswitch';
 import { LoginComponent } from './login/login.component';
-import { AuthGuardsPracticesModule } from './auth-guards-practices/auth-guards-practices.module';import { RouterModule } from '@angular/router';
+import { AuthGuardsPracticesModule } from './auth-guards-practices/auth-guards-practices.module';
+import { RouterModule } from '@angular/router';
 import { AuthGuard } from './services/auth.guard';
 import { DashboardAllComponent } from './dashboard-all/dashboard-all.component';
 import { MenubarModule } from 'primeng/menubar';
 import { NavbarModule } from './navbar/navbar.module';
-import {PanelMenuModule} from 'primeng/panelmenu';
+import { PanelMenuModule } from 'primeng/panelmenu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,6 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     RegistrationInReactiveFormComponent,
     LoginComponent,
     DashboardAllComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -85,11 +85,9 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     RouterModule,
     MenubarModule,
     NavbarModule,
-    PanelMenuModule
-
-
+    PanelMenuModule,
   ],
-  exports:[],
+  exports: [],
   providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
