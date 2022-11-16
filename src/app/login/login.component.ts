@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
   onLogin(email: string, password: string) {
+    localStorage.setItem('loginUser', email);
     this.authService.isLogin(1);
     this.router.navigateByUrl('/');
   }
