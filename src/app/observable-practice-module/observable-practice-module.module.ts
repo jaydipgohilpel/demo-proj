@@ -10,7 +10,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { CompliteSubjectDemoModule } from './complite-subject-demo/complite-subject-demo.module';
 import { MenubarModule } from 'primeng/menubar';
-import { NavbarComponent } from '../navbar/navbar.component';
 
 @NgModule({
   declarations: [

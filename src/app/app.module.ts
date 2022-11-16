@@ -40,6 +40,8 @@ import { DashboardAllComponent } from './dashboard-all/dashboard-all.component';
 import { MenubarModule } from 'primeng/menubar';
 import { NavbarModule } from './navbar/navbar.module';
 import { PanelMenuModule } from 'primeng/panelmenu';
+import { RxjsAndOtherPractisesComponent } from './rxjs-and-other-practises/rxjs-and-other-practises.component';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +53,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     RegistrationInReactiveFormComponent,
     LoginComponent,
     DashboardAllComponent,
+    RxjsAndOtherPractisesComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,6 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     ToastModule,
     InputTextModule,
     ProgressBarModule,
-    HttpClientModule,
     FormsModule,
     ProgressSpinnerModule,
     MatProgressBarModule,
@@ -86,6 +88,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     MenubarModule,
     NavbarModule,
     PanelMenuModule,
+    SharedModule.forRoot(),
   ],
   exports: [],
   providers: [AuthGuard],

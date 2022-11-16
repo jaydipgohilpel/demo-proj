@@ -15,7 +15,7 @@ export class SubjectService {
 
   private behaviorSubject = new BehaviorSubject(
     'behavior Subject initial value'
-  ); // initial value
+  );
   behaviorSubjectGlobal$ = this.behaviorSubject.asObservable();
 
   cnt = 1;

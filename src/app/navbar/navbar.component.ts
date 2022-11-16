@@ -51,6 +51,11 @@ export class NavbarComponent implements OnInit {
         icon: 'pi pi-fw pi-user-edit',
         routerLink: ['/auth-guards-practices'],
       },
+      {
+        label: 'rxjs-and-other-practises',
+        icon: 'pi pi-fw pi-reply',
+        routerLink: ['/rxjs-and-other-practises'],
+      },
     ];
   }
 

@@ -1,6 +1,6 @@
 import { Product } from '../interface/product';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, throwError, Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
@@ -52,5 +52,9 @@ export class ProductsService {
   }
   getAllProductSubject(data: any) {
     this.Product.next(data);
+  }
+
+  getDummyDataForRxjs(): Observable<any> {
+    return this.http.get<any>('https://reqres.in/api/users?page=2');
   }
 }

@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="d-flex">
+  <span>
+    <p-card header="Subscription Rxjs" subheader="What is a Subscription?" [style]="{width: '360px'}"
+      styleClass="shadow-2">
+      <p> A Subscription is an object that represents a disposable resource, usually the execution of
+        an Observable. A Subscription has one important method, unsubscribe, that takes no argument and just disposes
+        the
+        resource held by the subscription. In previous versions of RxJS, Subscription was called "Disposable".</p>
+      <ng-template pTemplate="footer">
+        <h3><b>Timer() Number : {{number}}</b> from rxjs</h3>
+        <h3><b>setInterval() Counter : {{intervalCounter}}</b> clearInterval()</h3>
+        <p-button label="Subscribe" icon="pi pi-check" (onClick)="subscribe()"></p-button>
+        <p-button label="UnSubscribe" icon="pi pi-times" styleClass="p-button-secondary"
+          [style]="{'margin-left': '.5em'}" (onClick)="unSubscribe()"></p-button>
+      </ng-template>
+    </p-card>
+  </span>
+  <span>
+    <p-table [value]="dummyData" responsiveLayout="scroll">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>#Id</th>
+          <th>first_name</th>
+          <th>last_name</th>
+          <th>email</th>
+          <th>avatar</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-dummyData>
+        <tr>
+          <td>{{dummyData.id}}</td>
+          <td>{{dummyData.first_name}}</td>
+          <td>{{dummyData.last_name}}</td>
+          <td>{{dummyData.email}}</td>
+          <td><img src="{{dummyData.avatar}}" class="shadow-4"></td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </span>
+</div>

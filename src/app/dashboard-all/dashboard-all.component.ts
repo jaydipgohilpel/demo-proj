@@ -46,6 +46,11 @@ export class DashboardAllComponent implements OnInit {
         routerLink: ['/auth-guards-practices'],
       },
       {
+        label: 'rxjs-and-other-practises',
+        icon: 'pi pi-fw pi-reply',
+        routerLink: ['/rxjs-and-other-practises'],
+      },
+      {
         label: 'Logout',
         icon: 'pi pi-fw pi-power-off',
         routerLink: ['/auth-guards-practices'],

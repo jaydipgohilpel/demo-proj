@@ -9,10 +9,10 @@ import { TwoComponent } from './auth-guards-practices/two/two.component';
 import { ThreeComponent } from './auth-guards-practices/three/three.component';
 import { LoginComponent } from './login/login.component';
 import { ViewProductsComponent } from './view-products/view-products.component';
-import { CreateProductComponent } from './create-product/create-product.component';
 import { RegistrationInReactiveFormComponent } from './registration-in-reactive-form/registration-in-reactive-form.component';
 import { DashboardComponent } from './observable-practice-module/dashboard/dashboard.component';
 import { CompliteDashboardComponent } from './observable-practice-module/complite-subject-demo/complite-dashboard/complite-dashboard.component';
+import { RxjsAndOtherPractisesComponent } from './rxjs-and-other-practises/rxjs-and-other-practises.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -57,6 +57,11 @@ const routes: Routes = [
     path: 'threecomponent',
     canActivate: [AuthGuard],
     component: ThreeComponent,
+  },
+  {
+    path: 'rxjs-and-other-practises',
+    canActivate: [AuthGuard],
+    component: RxjsAndOtherPractisesComponent,
   },
 ];
 
