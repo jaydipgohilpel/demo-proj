@@ -9,7 +9,7 @@ import { ThirdComponuntComponent } from './third-componunt/third-componunt.compo
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { CompliteSubjectDemoModule } from './complite-subject-demo/complite-subject-demo.module';
-import { MenubarModule } from 'primeng/menubar';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,11 +26,8 @@ import { MenubarModule } from 'primeng/menubar';
     SecondComponuntComponent,
     ThirdComponuntComponent,
     DashboardComponent,
-    MatButtonToggleModule,
-    InputSwitchModule,
     CompliteSubjectDemoModule,
-    MenubarModule,
-    NavbarModule,
+    SharedModule
   ],
 })
 export class ObservablePracticeModuleModule {}

@@ -8,6 +8,7 @@ import { CompliteDashboardComponent } from './complite-dashboard/complite-dashbo
 import { TableModule } from 'primeng/table';
 import { CompliteFooterComponent } from './complite-footer/complite-footer.component';
 import { NavbarModule } from 'src/app/navbar/navbar.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { NavbarModule } from 'src/app/navbar/navbar.module';
     CompliteDashboardComponent,
     CompliteFooterComponent,
   ],
-  imports: [CommonModule, FormsModule, TableModule, NavbarModule],
+  imports: [CommonModule,  NavbarModule, SharedModule],
   exports: [
     CompliteLeftbarComponent,
     CompliteFormCompoComponent,
