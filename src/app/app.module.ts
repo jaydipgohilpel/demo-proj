@@ -32,6 +32,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { NavbarModule } from './navbar/navbar.module';
 import { RxjsAndOtherPractisesComponent } from './rxjs-and-other-practises/rxjs-and-other-practises.component';
 import { SharedModule } from './shared/shared.module';
+import { Angular14PracticesModule } from './angular-14-practices/angular-14-practices.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import { SharedModule } from './shared/shared.module';
     MenubarModule,
     NavbarModule,
     SharedModule,
+    Angular14PracticesModule,
   ],
   exports: [],
   providers: [AuthGuard],

@@ -91,16 +91,10 @@
       "id": 19
     },
     {
-      "title": "d",
-      "image": "../../assets/images/71li-ujtlUL._AC_UX679_.jpg",
+      "title": "dhsfsdyhfg",
       "price": 4,
-      "id": 20
-    },
-    {
-      "title": "sd",
-      "price": 55,
       "image": "../../assets/images/71HblAHs5xL._AC_UY879_-2.jpg",
-      "id": 21
+      "id": 20
     }
   ],
   "jewelery": [
@@ -323,6 +317,18 @@
       "image": "../../assets/images/71li-ujtlUL._AC_UX679_.jpg",
       "price": 3,
       "id": 7
+    },
+    {
+      "title": "ggg",
+      "image": "../../assets/images/71li-ujtlUL._AC_UX679_.jpg",
+      "price": 444,
+      "id": 8
+    },
+    {
+      "title": "ur",
+      "image": "../../assets/images/71li-ujtlUL._AC_UX679_.jpg",
+      "price": 5,
+      "id": 9
     }
   ]
 }

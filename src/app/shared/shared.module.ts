@@ -1,3 +1,4 @@
+import { Angular14PracticesModule } from './../angular-14-practices/angular-14-practices.module';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
