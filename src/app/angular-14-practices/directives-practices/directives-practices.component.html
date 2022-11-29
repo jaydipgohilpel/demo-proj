@@ -86,7 +86,7 @@
   </div>
 </div>
 <div class="d-flex" *ngIf="false">
-  <div class="col-6">
+  <div class="col-md-6">
     <h1>directives-practices ngFor & index & first,last,odd,even!</h1>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
@@ -100,7 +100,7 @@
       </div>
     </div>
   </div>
-  <div class="col-6">
+  <div class="col-md-6">
     <h1>directives-practices Track By Exapmle ! </h1>
     <div class="d-flex">
       <div class="card" style="width: 18rem;">
@@ -114,12 +114,12 @@
               <th>age</th>
               <th>course</th>
             </tr>
-            <tr *ngFor="let s of studentDb;trackBy:tackByStudentId">
-              <td>{{s.id}}</td>
-              <td>{{s.name}}</td>
-              <td>{{s.gender}}</td>
-              <td>{{s.age}}</td>
-              <td>{{s.course}}</td>
+            <tr *ngFor="let student of studentDb;trackBy:tackByStudentId">
+              <td>{{student.id}}</td>
+              <td>{{student.name}}</td>
+              <td>{{student.gender}}</td>
+              <td>{{student.age}}</td>
+              <td>{{student.course}}</td>
             </tr>
           </table>
           <br>
@@ -130,8 +130,8 @@
   </div>
 </div>
 
-<div class="row" *ngIf="true">
-  <div class="col-6">
+<div class="row" *ngIf="false">
+  <div class="col-md-6">
     <h1>directives-practices Grouping with ngFor Directive !</h1>
     <div class="card" style="width: 18rem;">
       <h4 class="card-title"> Grouping with ngFor Directive</h4>
@@ -142,6 +142,74 @@
             <li>{{person.name}}</li>
           </ul>
         </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h1>directives-practices ngStyle Directives | Attribute Directives </h1>
+    <div class="card" style="width: 18rem;">
+      <h4 class="card-title"> ngStyle Directives | Attribute Directives </h4>
+      <div class="card-body">
+        <ul *ngFor="let person of people">
+          <li [ngStyle]="{'color':getcolor(person.country)}">{{person.name}} - ({{person.country}})</li>
+        </ul>
+        *****Inline ngStyle using condition*****
+        <ul *ngFor="let person of people">
+          <li *ngIf="person.country=='India' || person.country=='UK'"
+            [ngStyle]="{'color':person.country=='India'?'green':'red'}">{{person.name}} - ({{person.country}})</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="true">
+  <div class="col-md-6" *ngIf="true">
+    <h1>directives-practices ngStyle Directives | Attribute Directives </h1>
+    <div class="card" style="width: 18rem;">
+      <h4 class="card-title"> ngStyle Directives | Attribute Directives </h4>
+      <div class="card-body">
+        <p [ngStyle]="{'font-size':selectNgStyle.value+'px'}">directives-practices ngStyle Directives</p><br>
+        Select Font-size : <select name="font-size" #selectNgStyle (change)="0">
+          <option value="10">10px</option>
+          <option value="15">15px</option>
+          <option value="20">20px</option>
+          <option value="25">25px</option>
+          <option value="30">30px</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" *ngIf="true">
+    <h1>directives-practices ngClass Directives | Attribute Directives </h1>
+    <div class="card" style="width: 18rem;">
+      <h4 class="card-title"> ngClass Directives | Attribute Directives </h4>
+      <div class="card-body">
+        <p ngClass="fs-{{selectNgclass.value}}">directives-practices ngClass Directives</p><br>
+        Select Font-size : <select name="font-size" #selectNgclass (change)="0">
+          <option value="10">10px blue</option>
+          <option value="15">15px black</option>
+          <option value="20">20px brown</option>
+          <option value="25">25px green</option>
+          <option value="30">30px red</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" *ngIf="true">
+    <h1>directives-practices ngClass Directives | Attribute Directives </h1>
+    <div class="card" style="width: 18rem;">
+      <h4 class="card-title"> ngClass multiple class Directives </h4>
+      <div class="card-body">
+        <p [ngClass]="'font-25 blue  underline italic line-height-2'">ngClass Directives</p><br>
+        <p [ngClass]="['green','italic','font-30','bold','line-height-2']">ngClass use as Array
+          Directives</p><br>
+        <p [ngClass]="{'font-25':true,'underline':false,'blue':true,'font-30':false,'line-height-2':true}">
+           ngClass use as Object
+          Directives</p><br>
+        <p [ngClass]="getCssClass('mode')">
+           ngClass use as Object using method
+          Directives</p><br>
       </div>
     </div>
   </div>
