@@ -1,0 +1,148 @@
+<div class="row" *ngIf="false">
+  <div class="col-3">
+    <h1>directives-practices ngIf !</h1>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h4 class="card-title">directives-practices ngIf and ngIf else</h4>
+        <input type="radio" name="radio1" class="radio" (change)="changeToggale(true)" checked>True
+        <input type="radio" name="radio1" class="radio" (change)="changeToggale(false)">False
+        <div *ngIf="isValid" class="form-control  green">block is valid</div>
+        <div *ngIf="!isValid" class="form-control red">block is not valid</div>
+        <div class="card-body">
+          <div *ngIf="isValid; else elseblock" class="form-control  green">block is valid [using if
+            elseblock]</div>
+          <ng-template #elseblock>
+            <div class="form-control red">
+              block is not valid [using if elseblock]
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <h1>directives-practices ngIf then else !</h1>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h4 class="card-title">directives-practices ngIf then else</h4>
+        <input type="radio" name="radio2" class="radio" (change)="changeToggale(true)" checked>True
+        <input type="radio" name="radio2" class="radio" (change)="changeToggale(false)">False
+        <div class="card-body">
+          <div *ngIf="isValid; then thenblock;else elseblock"></div>
+          <ng-template #thenblock>
+            <div class="form-control  green">
+              block is valid [using if then elseblock]
+            </div>
+          </ng-template>
+          <ng-template #elseblock>
+            <div class="form-control red">
+              block is not valid [using if then elseblock]
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <h1>directives-practices ngSwitch !</h1>
+    <div class="d-flex">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h4 class="card-title">directives-practices ngIf then else</h4>
+          <div class="card-body">
+            <select name="name" #name id="" selected (change)="nameChange(name.value)">
+              <option value="">select any data</option>
+              <option value="jaydip">jaydip</option>
+              <option value="harsh">harsh</option>
+              <option value="jay">jay</option>
+              <option value="dhaval">dhaval</option>
+              <option value="nikunj">nikunj</option>
+            </select>
+            <br><br>
+            <div [ngSwitch]="nameOption">
+              <span *ngSwitchCase="'jaydip'" class="form-control green">Jaydip</span>
+              <span *ngSwitchCase="'harsh'" class="form-control green">harsh</span>
+              <span *ngSwitchCase="'jay'" class="form-control green">jay</span>
+              <span *ngSwitchCase="'dhaval'" class="form-control green">dhaval</span>
+              <span *ngSwitchCase="'nikunj'" class="form-control green">nikunj</span>
+              <span *ngSwitchDefault="" class="form-control red"> No Name Found</span>
+            </div>
+
+            <input type="text" class="text" (keyup)="0" #txtName>
+            <div [ngSwitch]="txtName.value">
+              <span *ngSwitchCase="'jaydip'" class="form-control  green">Jaydip</span>
+              <span *ngSwitchCase="'harsh'" class="form-control green">harsh</span>
+              <span *ngSwitchCase="'jay'" class="form-control green">jay</span>
+              <span *ngSwitchCase="'dhaval'" class="form-control green">dhaval</span>
+              <span *ngSwitchCase="'nikunj'" class="form-control green">nikunj</span>
+              <span *ngSwitchDefault="" class="form-control red"> No Name Found</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="d-flex" *ngIf="false">
+  <div class="col-6">
+    <h1>directives-practices ngFor & index & first,last,odd,even!</h1>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h4 class="card-title">directives-practices ngFor</h4>
+        <ul>
+          <li *ngFor="let item of studentName;let i=index;let f=first;let l=last;let e=even;let o=odd"><b>{{i}} </b> -
+            {{item.name}} <span *ngIf="f"> -
+              Fist </span><span *ngIf="l"> - Last </span><span *ngIf="e"> - even </span><span *ngIf="o"> - odd </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <h1>directives-practices Track By Exapmle ! </h1>
+    <div class="d-flex">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h4 class="card-title">Track By Exapmle!</h4>
+          <table>
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>gender</th>
+              <th>age</th>
+              <th>course</th>
+            </tr>
+            <tr *ngFor="let s of studentDb;trackBy:tackByStudentId">
+              <td>{{s.id}}</td>
+              <td>{{s.name}}</td>
+              <td>{{s.gender}}</td>
+              <td>{{s.age}}</td>
+              <td>{{s.course}}</td>
+            </tr>
+          </table>
+          <br>
+          <button (click)="getMoreStudentData()" type="button" class="btn btn-secondary">Get More Data</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="true">
+  <div class="col-6">
+    <h1>directives-practices Grouping with ngFor Directive !</h1>
+    <div class="card" style="width: 18rem;">
+      <h4 class="card-title"> Grouping with ngFor Directive</h4>
+      <div class="card-body">
+        <ul *ngFor="let group of countryDetails">
+          <li>{{group.country}}</li>
+          <ul *ngFor="let person of group.people">
+            <li>{{person.name}}</li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

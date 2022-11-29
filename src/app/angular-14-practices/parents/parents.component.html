@@ -1,0 +1,9 @@
+<div style="text-align:center">
+  <h2>parents component!</h2>
+  Enter data [Send Data To childs]: <input type="text" #parentInput class="text" (keyup)="0"><br><br>
+  value received from child component : <b>{{childData}}</b><br><br>
+
+  <div >
+    <app-chields [parentData]="parentInput.value" style="display: flex;justify-content: center;" (childEvent)="getChildData($event)"></app-chields><br>
+  </div>
+</div>

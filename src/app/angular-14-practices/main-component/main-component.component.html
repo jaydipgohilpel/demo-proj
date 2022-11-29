@@ -1,3 +1,41 @@
-<p>main-component works!</p>
-<h2>@HostListener Example</h2>
-<h3>click on any element thn it fire</h3>
+<div *ngIf="false">
+  <h2>@HostListener Example</h2>
+  <h3>click on any element thn it fire</h3>
+  <!-- <app-dummy></app-dummy> -->
+  <!-- dont works -->
+  <!-- <div class="app-dummy">dummy component</div> -->
+  <div app-dummy>dummy component</div>
+  <div>
+    <h1>
+      preserveWhitespaces in Angular
+    </h1>
+    <div>
+      <button type="button" (click)="displydummyComponent()" class="btn btn-primary">display
+        displydummyComponent</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-light">Light</button>
+      <button type="button" class="btn btn-dark">Dark</button>
+      <button type="button" class="btn btn-link">Link</button>
+    </div>
+  </div>
+  <div *ngIf="displyComponent">
+    <div app-dummy></div>
+  </div>
+</div>
+
+<!-- parent to chield and chield to parent data transfer using property -->
+<div *ngIf="false">
+  <h1>parent to chield data transfer using property</h1>
+  <div style="background-color:rgb(223, 138, 33); ">
+    <app-parents></app-parents>
+  </div>
+</div>
+
+<!-- <h1>Directives  practices</h1> -->
+<div *ngIf="true">
+  <app-directives-practices></app-directives-practices>
+</div>

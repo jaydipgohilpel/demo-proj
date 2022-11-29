@@ -45,6 +45,7 @@ import { Angular14PracticesModule } from './angular-14-practices/angular-14-prac
     LoginComponent,
     DashboardAllComponent,
     RxjsAndOtherPractisesComponent,
+
   ],
   imports: [
     BrowserModule,
