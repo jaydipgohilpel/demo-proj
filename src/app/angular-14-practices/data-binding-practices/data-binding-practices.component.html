@@ -1,0 +1,54 @@
+<div class="row" *ngIf="true">
+  <h1>Data Binding Practices </h1>
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h2 [innerHTML]="title"></h2>
+        <div> image property binding</div>
+        <img [src]="'https://angular.io/assets/images/logos/angular/shield-large.svg'" [height]="100" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width:fit-content;">
+      <h2 class="card-title">Attribute binding example</h2>
+      <div class="card-body">
+        <table [attr.border]="border" [attr.width]="width" [attr.height]="height">
+          <tr>
+            <td [attr.colspan]="cols">Student Details</td>
+          </tr>
+          <tr>
+            <td>Roll No.</td>
+            <td>Name</td>
+            <td>Class</td>
+          </tr>
+          <tr>
+            <td>001</td>
+            <td>Jaydip Gohil</td>
+            <td>Mca</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" *ngIf="true">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h2>Two way data binding </h2>
+        Enter your name : <input [value]="inputData" #input (input)="inputData=input.value">
+        <br>
+        Your Name : {{inputData}}
+        <div>
+          <h2> two way Data Binding</h2> Enter Your Name :
+          <input #input2 (input)="data = input2.value" [(ngModel)]="data" /><br />
+          Your Name :
+          {{ data }}
+
+          <input #input3 (input)="data = input3.value" [(ngModel)]="data" /><br />
+          Your Name :
+          {{ data }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

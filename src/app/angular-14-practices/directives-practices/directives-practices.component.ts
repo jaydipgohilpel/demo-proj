@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-directives-practices',
   templateUrl: './directives-practices.component.html',
-  styleUrls: ['./directives-practices.component.scss'],
+  styleUrls: ['./directives-practices.component.scss','../../../app/shared/common-style.css'],
 })
 export class DirectivesPracticesComponent implements OnInit {
   nameOption = '';

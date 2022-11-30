@@ -1,0 +1,732 @@
+import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/animate.min.css';
+import './assets/css/fontawesome.min.css';
+import './assets/css/feathericon.css';
+// import Greetings from './example/Greetings';
+// import  {FName,LName ,compnay} from './example/ImportExport';
+import {Add, Sub, Mult, Div} from './example/Calc';
+import SlotM from './example/SlotMach';
+import ArrayDest from './example/ArrayDestructur';
+import IncreDecre from './components/IncreDecre';
+import Events from './components/Events';
+import Forms from './components/Forms';
+import LoginForm from './components/LoginForm';
+import LoginFormMulti from './components/LoginFormMulti';
+import TodoList from './components/TodoList';
+import ToDoListSec from './components/ToDoListSec';
+import Notes from './components/Notes';
+import IncrementDecrement from './components/IncrementDecrement';
+import EffectEX from './components/EffectEX';
+import ApiCall from './components/ApiCall';
+import Card from './components/Card';
+import CardData from './components/CardData';
+import CRData from './components/CRData';
+import DefineCard, {DefineCardCom, CardTernary} from './components/CardDefine';
+import BootstrapCard from './example/BootstrapCard';
+import Content from './example/Context/Content';
+import SassExample from './components/SassExample';
+import FormHook from './components/FormHook';
+import FormValidation from './components/FormValidation';
+import FormValidationImage from './components/FormValidationImage';
+import FormDynamic from './components/FormDynamic';
+import FormAdvanceValidation from './components/FormAdvanceValidation';
+import FormReset from './components/FormReset';
+import UseformContext from './components/Forms/UseformContext';
+import MainApp from './components/Pages/MainApp';
+
+// Route-------------------
+import Main from './components/Routes/Main';
+import {BrowserRouter} from 'react-router-dom';
+import Posts from './components/Pagination/Posts';
+import BsPosts from './components/Pagination/BsPosts';
+
+// ----Recoil-Shop-----
+import {RecoilRoot} from 'recoil';
+import ShopApplication from './components/RecoilShop/ShopApplication';
+
+// ---ShopApplication Dynamic
+import ShopAppDynamic from './components/ShopAppDynamic/ShopAppDynamic';
+// ---Custom Datatable Dynamic
+import Datatable from './components/custom-datatable-dynamic/Datatable';
+// ---Custom Pagination
+import CustomPagination from './components/CustomPagination/CustomPagination';
+
+import CheckboxMultiValue from './components/CheckboxMultiValue';
+
+import FileUploadWithPreview from './components/FileUploadWithPreview';
+
+import ToggleSidebar from './components/ToggleSidebar';
+
+import SimpleTodo from './components/TodoApp/SimpleTodo';
+
+import TodoCrudAppLocalStorage from './components/TodoApp/TodoCrudAppLocalStorage';
+
+import MultipleInputDataHandler from './components/MultipleInputDataHandler';
+
+import SimpleStepWizardForm from './components/StepWizardForm/SimpleStepWizardForm';
+
+import SimpleFiltergallery from './components/FilterGallery/SimpleFiltergallery';
+
+import DiffCompFilterGallery from './components/FilterGallery/DiffComponents/DiffCompFilterGallery';
+import CheckboxRadioHandler from './components/CheckboxRadioHandler';
+import PasswordStrengthMeter from './components/PasswordStrengthMeter';
+import ChangeClassUsingRadio from './components/ChangeClassUsingRadio';
+import PasswordMatchValidation from './components/PasswordMatchValidation';
+import ReactToastify from './components/ReactToastify';
+import SearchFilter from './components/SearchFilter';
+import ReactSelect from './components/ReactPackages/React-Select/ReactSelect';
+import MenuActiveAnimation from './components/NavbarMenuActiveAnimation/MenuActiveAnimation';
+import DropdownClickOutSide from './components/DropdownClickOutSide';
+import CartCalculation from './components/CartCalculation';
+import EcommerceApp from './components/EcommerceProject/EcommerceApp';
+import KanbanTaskApp from './components/KanbanTaskApp/KanbanTaskApp';
+import DragAndDropMain from './components/DragAndDrop/DragAndDropMain';
+import FileUploadWithPreviewMultiple from './components/FileUploadWithPreviewMultiple';
+import CheckboxCheckAll from './components/CheckboxCheckAll';
+import TabMenu from './components/TabMenu';
+import MusicPlayer from './components/MusicPlayer/MusicPlayer';
+import AddRemoveClassOnScroll from './components/AddRemoveClassOnScroll';
+import CustomLightBoxGallery from './components/customLightBoxGallery/CustomLightBoxGallery';
+import RangeSlider from './components/RangeSlider';
+import ReactDatePicker from './components/ReactPackages/ReactDatepicker/ReactDatePicker';
+import ReactDatePicker2 from './components/ReactPackages/ReactDatePicker2/ReactDatePicker2';
+import ReactRCRangeSlider from './components/ReactPackages/ReactRCRangeSlider/ReactRCRangeSlider';
+import ReactCustomScrollbar from './components/ReactPackages/ReactCustomScrollbar/ReactCustomScrollbar';
+import ReactPerfectScollbar from './components/ReactPackages/ReactPerfectScollbar/ReactPerfectScollbar';
+import ReactIntelInput from './components/ReactPackages/ReactIntelInput/ReactIntelInput';
+import ReactPaginatePackage from './components/ReactPackages/ReactPaginate/ReactPaginate';
+import CustomAccordion from './components/CustomAccordion';
+import LoadMoreDataPagination from './components/LoadMoreDataPagination/LoadMoreDataPagination';
+import ReactQuillEditor from './components/ReactPackages/ReactQuillEditor/ReactQuillEditor';
+import ReactSlickSlider from './components/ReactPackages/ReactSlickSlider/ReactSlickSlider';
+import ReactSwiperSlider from './components/ReactPackages/ReactSwiperSlider/ReactSwiperSlider';
+import CustomIntelCodeInput from './components/custom-country-code-selection/CustomIntelCodeInput';
+import ReactBootstrapDateRangePicker from './components/ReactPackages/ReactBootstrapDateRangePicker/ReactBootstrapDateRangePicker';
+import CustomSelectDropdown from './components/CustomSelectDropdown/CustomSelectDropdown';
+import ReactRovingFocusOnSelect from './components/ReactRovingFocusOnSelect/ReactRovingFocusOnSelect';
+import ReactCustomScroll from './components/ReactPackages/ReactCustomScroll/ReactCustomScroll';
+import ReactSimplebar from './components/ReactPackages/ReactSimplebar/ReactSimplebar';
+import ReactSortableJs from './components/ReactPackages/ReactSortableJs/ReactSortableJs';
+import AddAndRemoveAnimation from './components/ReactPackages/ReactFlipMove/AddAndRemoveAnimation';
+import DisplayFirstLastNamesCharacter from './components/DisplayFirstLastNamesCharacter';
+import AddRemoveDataSortablejsDynamic from './components/AddRemoveDataSortablejsDynamic';
+import SingleFileUploadWithPreview from './components/FileUpload/SingleFileUploadWithPreview';
+import MultipleFileUploadWithPreview from './components/FileUpload/MultipleFileUploadWithPreview';
+import FileUploadOnlyImagesWithLightBox from './components/FileUpload/FileUploadOnlyImagesWithLightBox';
+import SimpleKanbanAppWithSortable from './components/KanbanBoard/SimpleKanbanAppWithSortable';
+import SimpleCRUDApp from './components/SimpleCrudApp/SimpleCRUDApp';
+import ReactClipboard from './components/ReactPackages/ReactClipboard/ReactClipboard';
+import ReactHotToastNotification from './components/ReactPackages/ReactHotToastNotification/ReactHotToastNotification';
+import ReactContexify from './components/ReactPackages/ReactContexify/ReactContexify';
+import ReactOTPInput from './components/ReactPackages/ReactOTPInput/ReactOTPInput';
+import DynamicFormChecklist from './components/DynamicFormChecklist';
+import ReactEmojiMart from './components/ReactPackages/ReactEmojiMart/ReactEmojiMart';
+import ReactAudioPlayerProgressBars from './components/ReactPackages/ReactAudioPlayerProgressBars/ReactAudioPlayerProgressBars';
+
+
+
+
+// const App = () => { }
+function App() {
+    return ( 
+        <>
+            {/* <Greetings/> */}
+        
+            {/* <h1>{FName}</h1>
+            <h1>{LName}</h1>
+            <h1>{compnay()}</h1> */}
+    
+            <div className="calc-heading d-none">
+                <h1>Add any two num calc is = {Add(15,18)}</h1>
+                <h1>Sub any two num calc is = {Sub(200,18)}</h1>
+                <h1>Multi any two num calc is = {Mult(15,18)}</h1>
+                <h1>Div any two num calc is = {Div(15,18)}</h1>
+            </div>
+   
+            <div className = "card-container d-none" >
+                <h3 className="heading-text">1. With Elements Data</h3>
+
+                <Card imgSrc = "http://skote-v-light.angular.themesbrand.com/assets/images/small/img-4.jpg"
+                cardHead = "Card Heading 1"
+                headingText = "text-info"
+                cardText = "Est dolorem necessitatibus repellat commodi, libero officia? Facilis quam eos, eaque similique explicabo voluptas harum eum excepturi beatae quas."
+                cardLink = "http://demo4.elaunchinfotech.biz/"
+                cardLinkText = "Watch Now"
+                btnName = "btn-info" />
+
+                <Card imgSrc={CardData[1].imgSrc}
+                cardHead = {CardData[1].cardHead}
+                headingText ={CardData[1].headingText}
+                cardText = {CardData[1].cardText}
+                cardLink = {CardData[1].cardLink}
+                cardLinkText = {CardData[1].cardLinkText}
+                btnName = {CardData[1].btnName} />
+
+                <Card imgSrc={CardData[2].imgSrc}
+                cardHead = {CardData[2].cardHead}
+                headingText ={CardData[2].headingText}
+                cardText = {CardData[2].cardText}
+                cardLink = {CardData[2].cardLink}
+                cardLinkText = {CardData[2].cardLinkText}
+                btnName = {CardData[2].btnName} />
+
+            </div> 
+
+            <div className = "card-container d-none" >
+
+                <h3 className="heading-text">2. With Simple Function</h3>
+                {CardData.map(CRData)}
+
+            </div> 
+
+            <div className = "card-container d-none" >
+                <h3 className="heading-text">3. With Fat Arrow Function</h3>
+                {CardData.map((val) =>{
+                    return(
+                        <Card 
+                        key = {val.id}
+                        imgSrc={val.imgSrc}
+                        cardHead = {val.cardHead}
+                        headingText ={val.headingText}
+                        cardText = {val.cardText}
+                        cardLink = {val.cardLink}
+                        cardLinkText = {val.cardLinkText}
+                        btnName = {val.btnName} />
+                    );
+                })}
+            </div> 
+
+            <div className = "card-container d-none" >
+                <h3 className="heading-text">4. If Else Condition</h3>
+                <DefineCard/>
+            </div>
+
+            <div className = "card-container d-none" >
+                <h3 className="heading-text">5. If Else Condition With components</h3>
+                <DefineCardCom/>
+            </div>
+
+            <div className = "card-container d-none" >
+                <h3 className="heading-text">5. If Else Ternary Condition</h3>
+                <CardTernary/>
+            </div>
+
+            <div className = "card-container d-none" >
+                <h3 className="heading-text">6. Slot Machine Ex.</h3>
+                <SlotM x="Action" y="Action" z="Action"/>
+                <SlotM x="Action" y="Drama" z="Thriller"/>
+                <SlotM x="Thriller" y="Action" z="Action"/>
+                <SlotM x="Thriller" y="Thriller" z="Thriller"/>
+            </div>
+
+            <div className="card-container d-none">
+                <h3 className="heading-text">7. Array Destructuring</h3>
+                {ArrayDest()}
+            </div>
+
+            <div className="card-container d-none">
+                <h3 className="heading-text">8. Increment & Decrement value</h3>
+                <IncreDecre/>
+            </div>
+
+            <div className="card-container d-none">
+                <h3 className="heading-text">9. Events</h3>
+                <Events/>
+            </div>
+
+            <div className="card-container d-none">
+                <h3 className="heading-text">10. Forms with input change and also with button click</h3>
+                <Forms/>
+            </div>
+
+            <div className="card-container d-none">
+                <h3 className="heading-text">11. Login Form Submit</h3>
+                <LoginForm/>
+            </div>
+
+            <div className="card-container d-none">
+                <h3 className="heading-text">12. Login Form Multiple Data</h3>
+                <LoginFormMulti/>
+            </div>
+            
+
+            <div className="card-container d-none">
+                <h3 className="heading-text">13. Todo List</h3>
+                <TodoList/>
+            </div>
+
+            <div className="card-container d-none">
+                <h3 className="heading-text">14. Increment And Decrement</h3>
+                <IncrementDecrement/>
+            </div>
+
+            <div className="card-container d-none">
+                <h3 className="heading-text">15. Todo List With Line Through</h3>
+                <ToDoListSec/>
+            </div>
+                
+            <div className="container d-none">
+                <h3 className="heading-text">16. Bootstrap Css card</h3>
+                <BootstrapCard/>
+            </div>
+
+            <div className="notes-container d-none">
+                <Notes/>
+            </div>
+
+            <div className="container d-none">
+                <h3 className="heading-text">17. Content API</h3>
+                <Content/>
+            </div>
+
+            <div className="container d-none">
+                <h3 className="heading-text">18. UseEffect</h3>
+                {/* <EffectEX/> */}
+            </div>
+
+            <div className="container d-none">
+                <h3 className="heading-text">19. API Call and Use</h3>
+                <ApiCall/>
+            </div>
+
+            <div className="container d-none">
+                <h3 className="heading-text">20. Page Routing</h3>
+                <BrowserRouter>
+                    <Main/>
+                </BrowserRouter>
+            </div>
+            
+            <div className="container d-none">
+                <h3 className="heading-text">21. Sass Example</h3>
+                <SassExample/>
+            </div>
+
+            <div className="container d-none">
+                <h3 className="heading-text">22. Form with React Hook form</h3>
+                <FormHook/>
+            </div>
+
+            <div className="container d-none">
+                <h3 className="heading-text">23. Form validation With React Hook form</h3>
+                <FormValidation/>
+            </div>
+
+
+            <div className="container d-none">
+                <h3 className="heading-text">24. Form validation With Image Upload</h3>
+                <FormValidationImage/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">25. Create Dynamic Form Using React hook Form</h3>
+                <FormDynamic/>
+            </div>
+            
+
+            <div className="container d-none">
+                <h3 className="heading-text">26. Form Advance Validation (Match Password)</h3>
+                <FormAdvanceValidation/>
+            </div>
+
+
+            <div className="container d-none">
+                <h3 className="heading-text">27. Form Reset Using React hook Form</h3>
+                <FormReset/>
+            </div>
+
+            <div className="container d-none">
+                <h3 className="heading-text">28. Form useFormContext React hook Form</h3>
+                <UseformContext/>
+            </div>
+            
+            <div className="d-none">
+                <h3 className="heading-text">28. React User App (Insert, Update, Delete)</h3>
+                <MainApp/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">29. React Pagination With Prev Next Only</h3>
+                <Posts/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">30. React Pagination With Bootstrap Pagination</h3>
+                <BsPosts/>
+            </div>
+
+            
+            <div className="d-none">
+                <h3 className="heading-text">31. Recoil Static Shop Crud Application </h3>
+                <RecoilRoot>
+                    <ShopApplication/>
+                </RecoilRoot>
+            </div>
+
+            <div className="d-none">
+                <h3 className="heading-text">32. Shop Application Dynamic Using Axios</h3>
+                <RecoilRoot>
+                    <ShopAppDynamic/>
+                </RecoilRoot>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">33. Custom Pagination With  (Three Dots)  More Data Handler</h3>
+                <CustomPagination/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">34. Custom Datatable With Dynamic Feature</h3>
+                <Datatable/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">35. Checkbox Multiple Value Get In Array Using useState</h3>
+                <CheckboxMultiValue/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">36. File Upload With Preview</h3>
+                <FileUploadWithPreview/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">37. File Upload With Preview Multiple</h3>
+                <FileUploadWithPreviewMultiple/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">38. Sidebar Open And close on click</h3>
+                <ToggleSidebar/>
+            </div>
+
+            
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">39. Simple Todo App With Delete All Button</h3>
+                <SimpleTodo/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">40. Todo App With Insert, Update and Delete With Local Storage</h3>
+                <TodoCrudAppLocalStorage/>
+            </div>
+            
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">41. Multiple Input Field Get Data In One Form Using State hook</h3>
+                <MultipleInputDataHandler/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">42. Simple Step Wizard Form</h3>
+                <SimpleStepWizardForm/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">43. Simple Filter Gallery in One component</h3>
+                <SimpleFiltergallery/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">44. Simple Filter Gallery in Multiple component</h3>
+                <DiffCompFilterGallery/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">45. Checked Or Unchecked radio and Checkbox on Submit or Click</h3>
+                <CheckboxRadioHandler/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">46. Password Strength ProgressBar Meter using zxcvbn Plugin</h3>
+                <PasswordStrengthMeter/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">47. Change Class Using useSate hook and radio button</h3>
+                <ChangeClassUsingRadio/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">48. Password and Confirm Password validation Match Or Not</h3>
+                <PasswordMatchValidation/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">49. React Toastify</h3>
+                <ReactToastify/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">50. Searh Filter In react using Hook</h3>
+                <SearchFilter/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">51. React Select Plugin</h3>
+                <ReactSelect/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">52. Navbar Menu Active With Animation</h3>
+                <MenuActiveAnimation/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">53. Custom Dropdown With Open and Close also Close on Window or document click</h3>
+                <DropdownClickOutSide/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">54. Cart Calculation</h3>
+                <CartCalculation/>
+            </div>
+            
+            <div className="container-fluid p-0 d-none">
+                <h3 className="heading-text ml-3 mr-3 d-none">55. Ecommerce App </h3>
+                <EcommerceApp/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">56. React Drag And Drop (react-beautiful-dnd)</h3>
+                <DragAndDropMain/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">57. Check All Checkbox</h3>
+                <CheckboxCheckAll/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text d-none">58. Kanban Task Management App</h3>
+                <KanbanTaskApp/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">59. Custom Tab Menu</h3>
+                <TabMenu/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">60. Music Player</h3>
+                <MusicPlayer/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text d-none">61. Add and Remove Class on scroll</h3>
+                <AddRemoveClassOnScroll/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">62. Custom Light Box gallery</h3>
+                <CustomLightBoxGallery/>
+            </div>
+            
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">63. Custom Range Slide With Click and Drag</h3>
+                <RangeSlider/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">64. React Simple Datepicker</h3>
+                <ReactDatePicker/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">65. React Datepicker 2</h3>
+                <ReactDatePicker2/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">66. React Bootstrap Date Range Picker</h3>
+                <ReactBootstrapDateRangePicker/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">67. React RC Range Slider</h3>
+                <ReactRCRangeSlider/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">68. React Custom Scrollbar</h3>
+                <ReactCustomScrollbar/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">69. React Perfect Scrollbar</h3>
+                <ReactPerfectScollbar/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">70. React Custom Scroll</h3>
+                <ReactCustomScroll/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">71. React Simplebar</h3>
+                <ReactSimplebar/>
+            </div>
+
+            
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">72. React Intel Input</h3>
+                <ReactIntelInput/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">73. React Paginate</h3>
+                <ReactPaginatePackage/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">74. React Quill Editor</h3>
+                <ReactQuillEditor/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">75. React Slick Slider</h3>
+                <ReactSlickSlider/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">76. React Swiper Slider</h3>
+                <ReactSwiperSlider/>
+            </div>
+            
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">77. React Sortable</h3>
+                <ReactSortableJs/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">78. React Flip Move (Add and Remove Data With Animation)</h3>
+                <AddAndRemoveAnimation/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">79. Simple Custom Accordion component</h3>
+                <CustomAccordion />
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">80. Pagination With Load More with loading</h3>
+                <LoadMoreDataPagination/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">81. Custom Country Selection with Dial Code</h3>
+                <CustomIntelCodeInput/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">82. Custom Select Dropdown</h3>
+                <CustomSelectDropdown/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">83. React Roving Focus On Select</h3>
+                <ReactRovingFocusOnSelect/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">84. Display first and last names first letters in a div</h3>
+                <DisplayFirstLastNamesCharacter/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">85. SortableJS With Add and remove Dynamic</h3>
+                <AddRemoveDataSortablejsDynamic/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">86. Single File Upload With Preview</h3>
+                <SingleFileUploadWithPreview/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">87. Multiple File Upload With Preview</h3>
+                <MultipleFileUploadWithPreview/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">88. File Upload Images Only With Lightbox</h3>
+                <FileUploadOnlyImagesWithLightBox/>
+            </div>
+
+
+            <div className="p-0 container-fluid d-none">
+                <h3 className="heading-text d-none">89. Simple Kanban App</h3>
+                <SimpleKanbanAppWithSortable/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">90. Simple CRUD Application</h3>
+                <SimpleCRUDApp/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">91. React Clipboard</h3>
+                <ReactClipboard/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">92. React Hot Toast Notification</h3>
+                <ReactHotToastNotification/>
+            </div>
+
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">93. React Contexify</h3>
+                <ReactContexify/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">94. React OTP input</h3>
+                <ReactOTPInput/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">95. Dynamic Form With Checklist</h3>
+                <DynamicFormChecklist/>
+            </div>
+
+            <div className="container-fluid d-none">
+                <h3 className="heading-text">96. React Emoji Picker</h3>
+                <ReactEmojiMart/>
+            </div>
+
+            <div className="container-fluid">
+                <h3 className="heading-text">97. Audio Player With Progressbars</h3>
+                <ReactAudioPlayerProgressBars/>
+            </div>
+
+            
+        </>
+    )
+}
+
+export default App;
