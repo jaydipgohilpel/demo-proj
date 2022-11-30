@@ -3,12 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-pipes-practice',
   templateUrl: './pipes-practice.component.html',
-  styleUrls: ['./pipes-practice.component.scss','../../../app/shared/common-style.css',],
+  styleUrls: [
+    './pipes-practice.component.scss',
+    '../../../app/shared/common-style.css',
+  ],
 })
 export class PipesPracticeComponent implements OnInit {
   constructor() {}
 
-  employees: any[] = [
+  employees = [
     {
       code: 'emp001',
       name: 'SDSD',
@@ -45,5 +48,18 @@ export class PipesPracticeComponent implements OnInit {
   width: number = 400;
   dob = new Date(1886, 8 - 1, 2);
   salary: number = 100000000;
+  name: string = 'Jaydip Gohil';
+  position: string = 'software developer';
+  work: string = 'Software development';
+  currentDate = new Date();
+  myNumber: number = 0.125555553456789;
+  persons: any = [
+    { code: '001', name: 'sdgsgssd', gender: 'male', salary: 45360000 },
+    { code: '002', name: 'sdsgsgsd', gender: 'female', salary: 6450000 },
+    { code: '003', name: 'sgsdssgsd', gender: 'male', salary: 4536000 },
+    { code: '004', name: 'dssgd', gender: 'female', salary: 25000 },
+    { code: '005', name: 'fagsgsfa', gender: 'male', salary: 3530000 },
+    { code: '006', name: 'gsrggs', gender: 'female', salary: 55000 },
+  ];
   ngOnInit(): void {}
 }

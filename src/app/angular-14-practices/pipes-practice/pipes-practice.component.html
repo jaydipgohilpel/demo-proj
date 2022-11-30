@@ -1,6 +1,6 @@
 <div class="row" *ngIf="true">
   <h1>pipes Practices </h1>
-  <div class="col-md-6" *ngIf="true">
+  <div class="col-md-6" *ngIf="false">
     <div class="card" style="width: fit-content;">
       <div class="card-body">
         <h2>simple pipes</h2>
@@ -21,8 +21,8 @@
       </div>
     </div>
   </div>
-  <div class="col-md-6" *ngIf="true">
-    <div class="card" style="width: fit-content;">
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h2>Parameterize pipes</h2>
         {{ dob }} <br><br>
@@ -33,8 +33,8 @@
       </div>
     </div>
   </div>
-  <div class="col-md-6" *ngIf="true">
-    <div class="card" style="width: fit-content;">
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h2>Multiple pipes</h2>
         medium : {{ dob | date: 'medium' | lowercase }} <br /><br />
@@ -42,11 +42,88 @@
       </div>
     </div>
   </div>
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h2>pipes with string</h2>
+        <h1>pipes example</h1>
+        <h3>{{name | uppercase}} - {{position | lowercase}} </h3>
+        <h4>{{work | titlecase}} </h4>
+        <h1>slice example</h1>
+        <h4>{{work |slice:5}} </h4>
+        <h4>{{work |slice:5:8}} </h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h2>data pipes expample</h2>
+        <h3>{{currentDate}} </h3>
+        <h3>Sort Date : {{currentDate|date: 'shortDate'}} </h3>
+        <h3>long Date : {{currentDate|date: 'longDate'}} </h3>
+        <h3>full Date : {{currentDate|date: 'fullDate'}} </h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h2>percent pipes expample</h2>
+        <h3>{{myNumber}} </h3>
+        <h3>{{myNumber|percent}} </h3>
+        <h3>{{myNumber|percent:'2.4-8'}} </h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h2>decimal pipes expample</h2>
+        <h3>{{myNumber}} </h3>
+        <h3>{{myNumber|number}} </h3>
+        <h3>{{myNumber|number:'2.4-8'}} </h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h2>currency pipes expample</h2>
+        <h3>{{myNumber}} </h3>
+        <h3>{{myNumber|currency}} </h3>
+        <h3>{{myNumber|currency:'INR'}} </h3>
+        <h3>{{myNumber|currency:'INR':'code'}} </h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" *ngIf="false">
+    <div class="card" style="width: fit-content;">
+      <div class="card-body">
+        <h2>json pipes expample</h2>
+        <div>{{employees|json}} </div><br><br>
+        <div>{{employees|slice:1:3|json}} </div>
+      </div>
+    </div>
+  </div>
   <div class="col-md-6" *ngIf="true">
     <div class="card" style="width: fit-content;">
       <div class="card-body">
-        <h2>pipes with string</h2>
-
+        <h2>Custom pipes expample</h2>
+        <table [attr.border]="border" [attr.width]="width" [attr.height]="height">
+          <tr>
+            <th>code</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Salary</th>
+          </tr>
+          <tr *ngFor="let em of persons">
+            <td>{{ em.code |empCodeFormator}}</td>
+            <td>{{ em.name | myPipe:em.gender}}</td>
+            <td>{{ em.gender|genderCase}}</td>
+            <td>{{ em.salary |salaryInCurrency}}</td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>

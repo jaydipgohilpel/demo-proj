@@ -8,6 +8,10 @@ import { ChieldsComponent } from './chields/chields.component';
 import { DirectivesPracticesComponent } from './directives-practices/directives-practices.component';
 import { DataBindingPracticesComponent } from './data-binding-practices/data-binding-practices.component';
 import { PipesPracticeComponent } from './pipes-practice/pipes-practice.component';
+import { MyPipePipe} from './pipes-practice/my-pipe.pipe';
+import { EmpCodeFormatorPipe } from './pipes-practice/emp-code-formator.pipe';
+import { GenderCasePipe } from './pipes-practice/gender-case.pipe';
+import { SalaryInCurrencyPipe } from './pipes-practice/salary-in-currency.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { PipesPracticeComponent } from './pipes-practice/pipes-practice.componen
     DirectivesPracticesComponent,
     DataBindingPracticesComponent,
     PipesPracticeComponent,
+    MyPipePipe,
+    EmpCodeFormatorPipe,
+    GenderCasePipe,
+    SalaryInCurrencyPipe,
   ],
   imports: [CommonModule, SharedModule],
   exports: [MainComponentComponent],
