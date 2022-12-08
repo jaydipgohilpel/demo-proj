@@ -1,4 +1,4 @@
-export interface Registration {
+export interface registration {
   confirmPassword?: string;
   dateOfBirth: Date;
   email: string;

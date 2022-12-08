@@ -273,6 +273,24 @@
       "password": "Qq1!11",
       "dateOfBirth": "2022-11-07",
       "id": 14
+    },
+    {
+      "firstName": "s",
+      "lastName": "s",
+      "email": "roman_test_t2d2@mailinator.com",
+      "mobile": "4884847844",
+      "password": "1!qQ11",
+      "dateOfBirth": "2022-12-15",
+      "id": 15
+    },
+    {
+      "firstName": "gj",
+      "lastName": "ddd",
+      "password": "1!qQ11",
+      "email": "ravi.gajera@inheritx.com",
+      "dateOfBirth": "2022-12-31",
+      "mobile": "4884847844",
+      "id": 16
     }
   ],
   "products-2": [

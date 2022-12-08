@@ -54,6 +54,11 @@ export class RegistrationInReactiveFormComponent implements OnInit {
     this.isSpecialCharacter = false;
     this.isNumber = false;
     this.ispasswordValid = false;
+
+    this.registrationDetailsService.getallRegistrationData()
+        .subscribe((res) => {
+        console.log(res);
+        });
   }
 
   get firstName() {
@@ -97,12 +102,22 @@ export class RegistrationInReactiveFormComponent implements OnInit {
       this.matchPassword &&
       this.ispasswordValid
     ) {
-      let payload = this.registrationForm.value;
-      delete payload.confirmPassword;
+      // let payload = this.registrationForm.value;
+      let x = {
+        firstName: this.registerFormControl.firstName.value,
+        lastName: this.registerFormControl.lastName.value,
+        password: this.registerFormControl.password.value,
+        email: this.registerFormControl.email.value,
+        dateOfBirth: this.registerFormControl.dateOfBirth.value,
+        mobile: this.registerFormControl.mobile.value,
+      };
+
+
+      // delete payload.confirmPassword;
 
       // api call
       this.registrationDetailsService
-        .newRegistration(payload)
+        .newRegistration(x)
         .subscribe((res) => {
           if (res) {
             const Toast = Swal.mixin({

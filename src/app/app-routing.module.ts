@@ -15,7 +15,7 @@ import { CompliteDashboardComponent } from './observable-practice-module/complit
 import { RxjsAndOtherPractisesComponent } from './rxjs-and-other-practises/rxjs-and-other-practises.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard], pathMatch:'full' },
   { path: 'login', component: LoginComponent },
   {
     path: 'dashboard-all',

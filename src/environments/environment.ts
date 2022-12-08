@@ -5,6 +5,9 @@
 export const environment = {
   production: false,
   Base_URL: 'http://localhost:3000',
+  // BackedendUrl:'https://localhost:44353'
+  BackedendUrl:'https://localhost:7294'
+
 };
 
 /*
