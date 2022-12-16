@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegistrationDetailsService } from '../services/registration-details.service';
 @Component({
   selector: 'app-registration-in-reactive-form',
@@ -132,6 +132,7 @@ export class RegistrationInReactiveFormComponent implements OnInit {
               title: 'Product Added successfully',
             });
             this.registrationForm.reset();
+            this.registerFormControlReset();
           }
         });
     }
@@ -169,7 +170,13 @@ export class RegistrationInReactiveFormComponent implements OnInit {
       : ((this.isNumber = false), (this.ispasswordValid = false));
   }
 
-  marktouch = (control: any) => control.markAsTouched({ onlySelf: true });
+  markTouchTrue = (control: any) => control.markAsTouched({ onlySelf: true });
+  markTouchFalse = (control: any) => control.markAsTouched({ onlySelf: false });
+
+  registerFormControlReset()
+  {
+
+  }
 
   ngAfterContentInit() {
     this.matchPassword = false;

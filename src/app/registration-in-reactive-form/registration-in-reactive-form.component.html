@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar> -->
 <section class="h-100 h-custom" style="background-color: #8fc4b7;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -62,7 +62,7 @@
                 <div class="col-md-6 mb-4">
                   <label class="form-label" for="password">Password</label>
                   <input type="password" id="password" class="form-control" formControlName="password"
-                    (keydown)="marktouch(password)"
+                    (keydown)="markTouchTrue(password)"
                     [ngClass]="{'is-invalid':password && password.invalid && ( password.touched || isSubmitted ) || password && password.valid && !matchPassword && !ispasswordValid,'is-valid':password && password.valid && ispasswordValid}   " />
                   <span class="validator" *ngIf="password && password.invalid && ( password.touched || isSubmitted)
                     ">
@@ -92,7 +92,7 @@
                 <div class="col-md-6 mb-4">
                   <label class="form-label" for="confirmPassword">Confirm Password</label>
                   <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword"
-                    (keydown)="marktouch(confirmPassword)"
+                    (keydown)="markTouchTrue(confirmPassword)"
                     [ngClass]="{'is-invalid':confirmPassword && confirmPassword.invalid && ( confirmPassword.touched || isSubmitted ) || confirmPassword && confirmPassword.valid && !matchPassword ,'is-valid':confirmPassword && confirmPassword.valid && matchPassword}" />
                   <span class="validator" *ngIf="confirmPassword && confirmPassword.invalid && ( confirmPassword.touched || isSubmitted)
                     ">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistrationDetailsService } from 'src/app/services/registration-details.service';
 
 @Component({
   selector: 'app-dashboard-registration-asp-backend',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardRegistrationAspBackendComponent implements OnInit {
 
-  constructor() { }
+  constructor(private registrationDetailsService: RegistrationDetailsService) { }
 
   ngOnInit(): void {
+    this.registrationDetailsService.getallRegistrationData()
+        .subscribe((res) => {
+        console.log(res);
+        });
   }
 
 }

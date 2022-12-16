@@ -13,7 +13,6 @@ export class RegistrationDetailsService {
 
   newRegistration(data: any): Observable<registration[]> {
     // return this.http.post<Registration[]>(this.apiUrl, data);
-    // return this.http.post<registration[]>(environment.BackedendUrl+"/api/registration", data);
     return this.http.post<registration[]>(environment.BackedendUrl+"/api/Employee", data);
   }
   getallRegistrationData(): Observable<registration[]> {

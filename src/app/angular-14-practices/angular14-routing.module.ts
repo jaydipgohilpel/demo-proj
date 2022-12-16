@@ -1,3 +1,4 @@
+import { UploadFileComponent } from './upload-file/upload-file.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DirectivesPracticesComponent } from './directives-practices/directives-practices.component';
@@ -9,6 +10,10 @@ const routes: Routes = [
   {
     path: 'directives',
     component: DirectivesPracticesComponent,
+  },
+  {
+    path: 'uploadfile',
+    component: UploadFileComponent,
   },
   {
     path: '**',

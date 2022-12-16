@@ -1,0 +1,28 @@
+
+<p-card>
+    <ng-template pTemplate="header">
+
+    </ng-template>
+    Body Content
+    <form #creatProductForm="ngForm" id="creatProductForm" name="creatProductForm"
+    (ngSubmit)="onSubmit(creatProductForm)" enctype="multipart/form-data" >
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="form-outline">
+          <label class="form-label" for="filname">filname</label>
+          <input type="file" id="filname" class="form-control form-control-lg" name="filname" required #filname
+            ngModel  (change)="onChange($event,filname)" />
+        </div>
+
+      </div>
+    </div>
+    <div class="mt-4 pt-2">
+      <button pButton type="submit" [disabled]="creatProductForm.invalid" label="Save" icon="pi pi-check"></button>
+    </div>
+  </form>
+
+    <ng-template pTemplate="footer">
+        Footer content here
+    </ng-template>
+</p-card>
+

@@ -1,7 +1,7 @@
 import { Product } from '../interface/product';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -29,6 +29,16 @@ export class ProductsService {
     return this.http.post<Product[]>(this.apiUrl, data);
   }
 
+  uploadFiletoAspcore(data: any): Observable<any> {
+    const formData = new FormData();
+    // Store form name as "file" with file data
+    formData.append('files', data.files, data.files.name);
+    formData.append('name', data.name);
+    return this.http.post<any>(
+      'https://localhost:7294/api/FileUpoads/upload',
+      formData
+    );
+  }
   createProductNewOne(data: any): Observable<Product[]> {
     return this.http.post<Product[]>(
       environment.Base_URL + '/products-2',
