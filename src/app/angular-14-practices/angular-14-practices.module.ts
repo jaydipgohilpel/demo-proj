@@ -16,7 +16,6 @@ import { SalaryInCurrencyPipe } from './pipes-practice/salary-in-currency.pipe';
 import { RoutingPracticesComponent } from './routing-practices/routing-practices.component';
 import { Angular14RoutingModule } from './angular14-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { CrudWithAspBackendModule } from './crud-with-asp-backend/crud-with-asp-backend.module';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 
 @NgModule({
@@ -36,7 +35,7 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     PageNotFoundComponent,
     UploadFileComponent,
   ],
-  imports: [CommonModule, SharedModule,Angular14RoutingModule,RouterModule,CrudWithAspBackendModule],
+  imports: [CommonModule, SharedModule,Angular14RoutingModule,RouterModule],
   exports: [MainComponentComponent,],
 })
 export class Angular14PracticesModule {}
