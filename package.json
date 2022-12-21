@@ -12,6 +12,7 @@
   "dependencies": {
     "@angular/animations": "^14.2.0",
     "@angular/cdk": "^14.2.6",
+    "@angular/cli": "^15.0.4",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
     "@angular/core": "^14.2.0",
@@ -22,7 +23,7 @@
     "@angular/router": "^14.2.0",
     "@ngneat/hot-toast": "^4.1.0",
     "@ngneat/overview": "^3.0.0",
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.2.3",
     "json-server": "^0.17.1",
     "primeicons": "^6.0.1",
     "primeng": "^14.1.2",
@@ -33,7 +34,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.7",
-    "@angular/cli": "~14.2.7",
     "@angular/compiler-cli": "^14.2.0",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.3.0",

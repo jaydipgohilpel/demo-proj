@@ -1,5 +1,5 @@
-import { PassDataInHeaderService } from '../services/pass-data-in-header.service';
 import { Component, OnInit } from '@angular/core';
+import { PassDataInHeaderService } from '../services/pass-data-in-header.service';
 @Component({
   selector: 'app-pass-data-in-header',
   templateUrl: './pass-data-in-header.component.html',

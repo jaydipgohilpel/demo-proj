@@ -1,8 +1,8 @@
-import { Product } from './../interface/product';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { ProductsService } from '../services/products.service';
-import Swal from 'sweetalert2';
 import { Table } from 'primeng/table';
+import Swal from 'sweetalert2';
+import { ProductsService } from '../services/products.service';
+import { Product } from './../interface/product';
 
 @Component({
   selector: 'app-view-products',

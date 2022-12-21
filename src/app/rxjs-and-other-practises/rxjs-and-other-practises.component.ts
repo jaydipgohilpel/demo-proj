@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { timer } from 'rxjs';
 import { ProductsService } from '../services/products.service';
 

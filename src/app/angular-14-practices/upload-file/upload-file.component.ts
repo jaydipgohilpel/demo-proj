@@ -1,7 +1,7 @@
-import { ProductsService } from './../../services/products.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { ProductsService } from './../../services/products.service';
 
 @Component({
   selector: 'app-upload-file',

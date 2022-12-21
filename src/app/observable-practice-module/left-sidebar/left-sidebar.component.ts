@@ -1,6 +1,6 @@
-import { SubjectService } from './../../services/subject.service';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs';
+import { SubjectService } from './../../services/subject.service';
 
 @Component({
   selector: 'app-left-sidebar',

@@ -1,5 +1,5 @@
-import { SubjectService } from './../../services/subject.service';
 import { Component, OnInit } from '@angular/core';
+import { SubjectService } from './../../services/subject.service';
 
 @Component({
   selector: 'app-first-componunt',

@@ -1,4 +1,4 @@
-console.log("EmployeeDummy class called");
+// console.log("EmployeeDummy class called");
 
 export class EmployeeDummy {
   constructor(){

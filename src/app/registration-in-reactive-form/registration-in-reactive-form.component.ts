@@ -1,6 +1,6 @@
-import Swal from 'sweetalert2';
 import { Component, OnInit } from '@angular/core';
-import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 import { RegistrationDetailsService } from '../services/registration-details.service';
 @Component({
   selector: 'app-registration-in-reactive-form',
