@@ -45,7 +45,6 @@ import { ViewProductsComponent } from './view-products/view-products.component';
     LoginComponent,
     DashboardAllComponent,
     RxjsAndOtherPractisesComponent,
-
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export class OneComponent implements OnInit {
   ngOnInit(): void {}
   onLogout() {
     this.authService.isLogin(null);
-    localStorage.setItem('loginUser', "");
+    localStorage.setItem('loginUser', '');
     this.router.navigate(['/login']);
     alert('Logout User');
   }

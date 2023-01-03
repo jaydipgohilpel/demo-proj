@@ -1,2 +1,5 @@
 cd src/assets/data
 json-server --watch db.json
+
+run your dist file
+npx lite-server  --baseDir="dist/demo-proj"

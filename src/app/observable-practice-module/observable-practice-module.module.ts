@@ -25,7 +25,7 @@ import { ThirdComponuntComponent } from './third-componunt/third-componunt.compo
     ThirdComponuntComponent,
     DashboardComponent,
     CompliteSubjectDemoModule,
-    SharedModule
+    SharedModule,
   ],
 })
 export class ObservablePracticeModuleModule {}

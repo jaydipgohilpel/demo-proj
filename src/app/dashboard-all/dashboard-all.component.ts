@@ -70,7 +70,7 @@ export class DashboardAllComponent implements OnInit {
       icon: 'success',
       title: 'User has been Logout',
     });
-    localStorage.setItem('loginUser', "");
+    localStorage.setItem('loginUser', '');
     this.authService.isLogin(null);
     this.router.navigate(['/login']);
   }

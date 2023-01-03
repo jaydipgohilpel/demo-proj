@@ -55,10 +55,11 @@ export class RegistrationInReactiveFormComponent implements OnInit {
     this.isNumber = false;
     this.ispasswordValid = false;
 
-    this.registrationDetailsService.getallRegistrationData()
-        .subscribe((res) => {
+    this.registrationDetailsService
+      .getallRegistrationData()
+      .subscribe((res) => {
         console.log(res);
-        });
+      });
   }
 
   get firstName() {
@@ -112,29 +113,26 @@ export class RegistrationInReactiveFormComponent implements OnInit {
         mobile: this.registerFormControl.mobile.value,
       };
 
-
       // delete payload.confirmPassword;
 
       // api call
-      this.registrationDetailsService
-        .newRegistration(x)
-        .subscribe((res) => {
-          if (res) {
-            const Toast = Swal.mixin({
-              toast: true,
-              position: 'top-end',
-              showConfirmButton: false,
-              timer: 1500,
-              timerProgressBar: true,
-            });
-            Toast.fire({
-              icon: 'success',
-              title: 'Product Added successfully',
-            });
-            this.registrationForm.reset();
-            this.registerFormControlReset();
-          }
-        });
+      this.registrationDetailsService.newRegistration(x).subscribe((res) => {
+        if (res) {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500,
+            timerProgressBar: true,
+          });
+          Toast.fire({
+            icon: 'success',
+            title: 'Product Added successfully',
+          });
+          this.registrationForm.reset();
+          this.registerFormControlReset();
+        }
+      });
     }
   }
 
@@ -173,10 +171,7 @@ export class RegistrationInReactiveFormComponent implements OnInit {
   markTouchTrue = (control: any) => control.markAsTouched({ onlySelf: true });
   markTouchFalse = (control: any) => control.markAsTouched({ onlySelf: false });
 
-  registerFormControlReset()
-  {
-
-  }
+  registerFormControlReset() {}
 
   ngAfterContentInit() {
     this.matchPassword = false;

@@ -16,7 +16,7 @@ import { CompliteLeftbarComponent } from './complite-leftbar/complite-leftbar.co
     CompliteDashboardComponent,
     CompliteFooterComponent,
   ],
-  imports: [CommonModule,  NavbarModule, SharedModule],
+  imports: [CommonModule, NavbarModule, SharedModule],
   exports: [
     CompliteLeftbarComponent,
     CompliteFormCompoComponent,

@@ -15,14 +15,13 @@ export class UploadFileComponent implements OnInit {
   file: any;
   // On file Select
   onChange(event: any, item: any) {
-   this.file=event.target.files[0];
+    this.file = event.target.files[0];
   }
   onSubmit(creatProductForm: NgForm) {
-
     if (creatProductForm.valid) {
       const payload = {
         files: this.file,
-        name:"jaydip"
+        name: 'jaydip',
       };
       this.productsService
         .uploadFiletoAspcore(payload)
@@ -35,15 +34,13 @@ export class UploadFileComponent implements OnInit {
             timerProgressBar: true,
           });
           if (res.ok) {
-            debugger
             Toast.fire({
               icon: 'success',
-              title: res.message              ,
+              title: res.message,
             });
-          }
-          else{
+          } else {
             Toast.fire({
-              icon:'error' ,
+              icon: 'error',
               title: res.message,
             });
           }

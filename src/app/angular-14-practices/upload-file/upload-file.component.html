@@ -1,17 +1,16 @@
-
 <p-card>
-    <ng-template pTemplate="header">
+  <ng-template pTemplate="header">
 
-    </ng-template>
-    Body Content
-    <form #creatProductForm="ngForm" id="creatProductForm" name="creatProductForm"
-    (ngSubmit)="onSubmit(creatProductForm)" enctype="multipart/form-data" >
+  </ng-template>
+  Body Content
+  <form #creatProductForm="ngForm" id="creatProductForm" name="creatProductForm" (ngSubmit)="onSubmit(creatProductForm)"
+    enctype="multipart/form-data">
     <div class="row">
       <div class="col-md-6 mb-4">
         <div class="form-outline">
           <label class="form-label" for="filname">filname</label>
-          <input type="file" id="filname" class="form-control form-control-lg" name="filname" required #filname
-            ngModel  (change)="onChange($event,filname)" />
+          <input type="file" id="filname" class="form-control form-control-lg" name="filname" required #filname ngModel
+            (change)="onChange($event,filname)" />
         </div>
 
       </div>
@@ -21,8 +20,7 @@
     </div>
   </form>
 
-    <ng-template pTemplate="footer">
-        Footer content here
-    </ng-template>
+  <ng-template pTemplate="footer">
+    Footer content here
+  </ng-template>
 </p-card>
-

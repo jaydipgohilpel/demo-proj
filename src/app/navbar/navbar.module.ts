@@ -5,7 +5,7 @@ import { NavbarComponent } from './navbar.component';
 
 @NgModule({
   declarations: [NavbarComponent],
-  imports: [CommonModule,SharedModule],
+  imports: [CommonModule, SharedModule],
   exports: [NavbarComponent],
 })
 export class NavbarModule {}

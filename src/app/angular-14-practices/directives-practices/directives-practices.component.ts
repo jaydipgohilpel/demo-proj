@@ -3,7 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-directives-practices',
   templateUrl: './directives-practices.component.html',
-  styleUrls: ['./directives-practices.component.scss','../../../app/shared/common-style.css'],
+  styleUrls: [
+    './directives-practices.component.scss',
+    '../../../app/shared/common-style.css',
+  ],
 })
 export class DirectivesPracticesComponent implements OnInit {
   nameOption = '';
@@ -134,16 +137,16 @@ export class DirectivesPracticesComponent implements OnInit {
     if (flag == 'mode') {
       cssClass = {
         'font-30': true,
-        'green': true,
-        'bold': true,
-        'line-height-2':true
+        green: true,
+        bold: true,
+        'line-height-2': true,
       };
     } else {
       cssClass = {
         'font-25': true,
-        'blue': true,
-        'italic': true,
-        'line-height-1':true
+        blue: true,
+        italic: true,
+        'line-height-1': true,
       };
     }
     return cssClass;
