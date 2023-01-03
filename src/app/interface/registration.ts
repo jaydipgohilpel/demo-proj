@@ -1,4 +1,4 @@
-export interface registration {
+export interface Registration {
   confirmPassword?: string;
   dateOfBirth: Date;
   email: string;
@@ -7,4 +7,14 @@ export interface registration {
   lastName: string;
   mobile: string;
   password: string;
+}
+
+export interface RegistrationAngular14 {
+  firstName: string;
+  lastName: string;
+  email: string;
+  address: string;
+  city: string;
+  state: string;
+  id?: number;
 }

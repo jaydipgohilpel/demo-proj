@@ -129,8 +129,8 @@ export class RegistrationInReactiveFormComponent implements OnInit {
             icon: 'success',
             title: 'Product Added successfully',
           });
+          this.isSubmitted = false;
           this.registrationForm.reset();
-          this.registerFormControlReset();
         }
       });
     }
@@ -170,8 +170,6 @@ export class RegistrationInReactiveFormComponent implements OnInit {
 
   markTouchTrue = (control: any) => control.markAsTouched({ onlySelf: true });
   markTouchFalse = (control: any) => control.markAsTouched({ onlySelf: false });
-
-  registerFormControlReset() {}
 
   ngAfterContentInit() {
     this.matchPassword = false;

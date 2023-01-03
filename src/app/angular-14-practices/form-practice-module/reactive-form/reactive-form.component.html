@@ -1,0 +1,74 @@
+<div class="body">
+  <div class="container main">
+    <div class="form-body border-primary">
+      <h2>Registration Form</h2>
+      <form class="row g-3" [formGroup]="registrationForm" (ngSubmit)="submiteRegistrationForm(registrationForm)">
+        <div class="col-md-6">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" [ngClass]="{'input-border-error':isSubmitted}"
+            formControlName='firstName'>
+          <div class="error-message" *ngIf="firstName && firstName.invalid && (firstName.touched || isSubmitted)">
+            *<i>Fisrt Name is Required</i></div>
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="lastName" class="form-control" id="lastName" [ngClass]="{'input-border-error':isSubmitted}"
+            formControlName='lastName'>
+          <div class="error-message" *ngIf="lastName && lastName.invalid && (lastName.touched || isSubmitted)">
+            *<i>Last Name is Required</i></div>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" [ngClass]="{'input-border-error':isSubmitted}"
+            formControlName='email'>
+          <div class="error-message" *ngIf="email && email.invalid && (email.touched || isSubmitted)">
+            *<i>Email is Required or Email is Invalid</i></div>
+        </div>
+        <div class="col-md-6">
+          <label for="address" class="form-label">Address</label>
+          <input type="address" class="form-control" id="address" [ngClass]="{'input-border-error':isSubmitted}"
+            formControlName='address'>
+          <div class="error-message" *ngIf="address && address.invalid && (address.touched || isSubmitted)">
+            *<i>Address is Required</i></div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="city" class="form-label">City</label>
+          <input type="city" class="form-control" id="city" [ngClass]="{'input-border-error':isSubmitted}"
+            formControlName='city'>
+          <div class="error-message" *ngIf="city && city.invalid && (city.touched || isSubmitted)">
+            *<i>City is Required</i></div>
+        </div>
+        <div class="col-md-6">
+          <label for="state" class="form-label">State</label>
+          <input type="state" class="form-control" id="state" [ngClass]="{'input-border-error':isSubmitted}"
+            formControlName='state'>
+          <div class="error-message" *ngIf="state && state.invalid && (state.touched || isSubmitted)">
+            *<i>State is Required</i></div>
+        </div>
+        <div class="col-12 text-align button-section">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="button" class="btn btn-info" (click)="setValueInForm()">SetValue()</button>
+          <button type="button" class="btn btn-success" (click)="patchValueInForm()">PatchValue()</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<div>
+</div>
+  <div class="container main">
+    <div class="form-body border-primary row" *ngIf="(data!.length>0)">
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary" (click)="shaowHideData()">{{buttonText}}</button>
+      </div>
+      <div class="col-12" *ngIf="displayAllData">
+        <h3>{{data |json}}</h3>
+      </div>
+    </div>
+    <div class="form-body border-primary row" *ngIf="(data!.length<=0)">
+      <div class="col-12 text-center">
+        <h3>No Data Found </h3>
+      </div>
+    </div>
+  </div>
+</div>
