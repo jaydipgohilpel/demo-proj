@@ -17,8 +17,6 @@ import { MyPipePipe } from './pipes-practice/my-pipe.pipe';
 import { PipesPracticeComponent } from './pipes-practice/pipes-practice.component';
 import { SalaryInCurrencyPipe } from './pipes-practice/salary-in-currency.pipe';
 import { RoutingPracticesComponent } from './routing-practices/routing-practices.component';
-import { Com1Component } from './services-practices/com1/com1.component';
-import { Com2Component } from './services-practices/com2/com2.component';
 import { ServicesPracticesComponent } from './services-practices/services-practices.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 
@@ -38,9 +36,7 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     RoutingPracticesComponent,
     PageNotFoundComponent,
     UploadFileComponent,
-    ServicesPracticesComponent,
-    Com1Component,
-    Com2Component,
+    ServicesPracticesComponent
   ],
   exports: [MainComponentComponent],
   imports: [
