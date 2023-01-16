@@ -12,11 +12,11 @@ export class RegistrationDetailsService {
   constructor(private http: HttpClient) {}
 
   newRegistration(data: any): Observable<Registration[]> {
-    // return this.http.post<Registration[]>(this.apiUrl, data);
-    return this.http.post<Registration[]>(
-        environment.BackedendUrl + '/api/Employee',
-        data
-      );
+    return this.http.post<Registration[]>(this.apiUrl, data);
+    // return this.http.post<Registration[]>(
+    //     environment.BackedendUrl + '/api/Employee',
+    //     data
+    //   );
   }
   getallRegistrationData(): Observable<Registration[]> {
     return this.http.get<Registration[]>(
